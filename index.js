@@ -23,7 +23,7 @@ app.get('/webhook', function (req, res) {
 });
 
 // handler receiving messages
-app.post('/webhook', function (req, res)) {
+app.post('/webhook', function (req, res) {
 	var events = req.body.entry[0].messaging;
   for (i = 0; i < events.length; i++) {
     var event = events[i];
@@ -36,7 +36,7 @@ app.post('/webhook', function (req, res)) {
     }
   }
   res.sendStatus(200);
-};
+});
 
 // generic function sending messages
 function sendMessage(recipientId, message) {
