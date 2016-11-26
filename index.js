@@ -86,15 +86,6 @@ function banterTheUser(recipientID, text) {
     return false;
 }
 
-function handlePostBack(recipientId, case) {
-    if (case === 'REFERRAL') {
-        // Refer somehow
-
-    }
-
-    // Different cases
-}
-
 function persistent_menu() {
     request({
         url: 'https://graph.facebook.com/v2.6/me/thread_settings',
