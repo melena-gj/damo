@@ -120,28 +120,28 @@ function sendMessage(recipientId, message) {
 
 //questions to ask start asking what the user wants
 function banterTheUser(recipientID, text) {
-    text = text || "";
+    text = text.toLowerCase() || "";
 
 
     switch(text){
-      case "Careers":
+      case "careers":
         // sendMessage(recipientID, {text: "u have no career m8"});
         quick_reply(recipientID, "Option 1 Here", "Option 2 Here", "Option 3 Here", "Yo the message goes here");
         break;
-      case "Exams":
-        sendMessage(recipientID, {text: "u'r going to fail ur exams"});
+      case "exams":
+        messageHelper(recipientID, {text: "u'r going to fail ur exams"});
         break;
-      case "Study":
-        sendMessage(recipientID, {text: "u just might as well get drunk"});
+      case "study":
+        messageHelper(recipientID, {text: "u just might as well get drunk"});
         break;
-      case "Pressure":
-      	sendMessage(recipientID, {text: "just kill urself"});
+      case "pressure":
+      	messageHelper(recipientID, {text: "just kill urself"});
         break;
-      case "Refer":
-        sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
+      case "refer":
+        messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
-      case "Option 1 Here":
-        sendMessage(recipientID, {text: "Who even needs JSON"});
+      case "option 1 here":
+        messageHelper(recipientID, {text: "Who even needs JSON"});
         break;
     }
     return true
