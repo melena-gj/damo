@@ -1,0 +1,49 @@
+//Persistent Menu
+
+curl -X POST -H "Content-Type: application/json" -d '{  
+  "setting_type" : "call_to_actions",
+  "thread_state" : "existing_thread",
+  "call_to_actions":[
+    {
+      "type":"postback",
+      "title":"Careers",
+      "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
+    },
+    {
+      "type":"postback",
+      "title":"Exams",
+      "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
+    },
+    {
+      "type":"postback",
+      "title":"Study",
+      "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
+    },
+    {
+      "type":"postback",
+      "title":"Pressure from others",
+      "payload":"DEVELOPER_DEFINED_FOR_PRESSURE"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
+
+//Get started button
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "payload":"USER_DEFINED_PAYLOAD"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
+
+//Greeting text
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "setting_type":"greeting",
+  "greeting":{
+    "text":"Hey, old mate Damo here. Here to have a yarn with you about the old HSC."
+  }
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"   
