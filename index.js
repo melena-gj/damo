@@ -48,9 +48,9 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
 
-messageHelper(recipientId, message){
-  // setTimeout(sendMessage(recipientId, message), 3000)
-  sendMessage(recipientId, message)
+messageHelper = function(recipientId, message){
+  setTimeout(sendMessage(recipientId, message), 3000)
+  // sendMessage(recipientId, message)
 }
 
 // generic function sending messages
