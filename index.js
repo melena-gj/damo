@@ -55,7 +55,20 @@ function sendMessage(recipientId, message) {
 
 //questions to ask start asking what the user wants
 function findOutUserRequirements(recipientID, text) {
-    
+    text = text || "";
+    var values = text.split(' ');
+
+    if (values[0]==="Careers") {
+    	sendMessage(recipientID, {text: "u have no career m8"});
+    } else if (values[0]==="Exams") {
+    	sendMessage(recipientID, {text: "u'r going to fail ur exams"});
+    } else if (values[0]==="Study") {
+    	sendMessage(recipientID, {text: "u just might as well get drunk"});
+    } else if (values[0]==="Pressure") {
+    	sendMessage(recipientID, {text: "just kill urself"});
+    }
+
+
 }
 
 // Page Access Token
