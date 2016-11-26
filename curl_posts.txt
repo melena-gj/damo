@@ -7,27 +7,27 @@ curl -X POST -H "Content-Type: application/json" -d '{
     {
       "type":"postback",
       "title":"Careers",
-      "payload":"Careers"
+      "payload":1
     },
     {
       "type":"postback",
       "title":"Exams",
-      "payload":"Exams"
+      "payload":2
     },
     {
       "type":"postback",
       "title":"Study",
-      "payload":"Study"
+      "payload":3
     },
     {
       "type":"postback",
       "title":"Pressure from others",
-      "payload":"Pressure"
+      "payload":4
     },
     {
       "type":"postback",
       "title":"Refer a friend about this",
-      "payload":"Refer"
+      "payload":5
     }
   ]
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
@@ -39,7 +39,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "thread_state":"new_thread",
   "call_to_actions":[
     {
-      "payload":"USER_DEFINED_PAYLOAD"
+      "payload":0
     }
   ]
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
