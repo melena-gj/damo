@@ -34,13 +34,13 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text) {
             // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
-              messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+                messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        		//ignore the initial "Get started" button
-        		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
-        				messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Do any of these areas interest you?"});
-        		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
+    		//ignore the initial "Get started" button
+    		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
+        		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Do any of these areas interest you?"});
+    		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
             }
         }
@@ -48,9 +48,9 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
 
-messageHelper = function(recipientId, message){
-  // setTimeout(sendMessage(recipientId, message), 300)
-  sendMessage(recipientId, message)
+messageHelper = function(recipientId, message) {
+    // setTimeout(sendMessage(recipientId, message), 300)
+    sendMessage(recipientId, message)
 }
 
 // generic function sending messages
@@ -91,7 +91,8 @@ function banterTheUser(recipientID, text) {
     	sendMessage(recipientID, {text: "just kill urself"});
     	return true;
     } else if (values[0]==="Refer") {
-    	sendMessage(recipientID, {text: "you have no friends m7"});
+    	sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
+
     	return true;
     }
 
@@ -148,6 +149,10 @@ function persistent_menu() {
         }
     });
 };
+
+function refer() {
+
+}
 
 // Page Access Token
 // EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD
