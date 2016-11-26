@@ -126,7 +126,7 @@ function banterTheUser(recipientID, text) {
     switch(text){
       case "careers":
         // sendMessage(recipientID, {text: "u have no career m8"});
-        quick_reply(recipientID, "Option 1 Here", "Option 2 Here", "Option 3 Here", "Yo the message goes here");
+        quick_reply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
         messageHelper(recipientID, {text: "u'r going to fail ur exams"});
@@ -140,8 +140,8 @@ function banterTheUser(recipientID, text) {
       case "refer":
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
-      case "option 1 here":
-        messageHelper(recipientID, {text: "Who even needs JSON"});
+      case "Yep!":
+        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
     }
     return true
