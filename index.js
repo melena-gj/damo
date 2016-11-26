@@ -28,9 +28,7 @@ app.post('/webhook', function (req, res) {
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
-            if (!bevMessage(event.sender.id, event.message.text)) {
-                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
-            }
+            sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
         }
     }
     res.sendStatus(200);
@@ -53,56 +51,4 @@ function sendMessage(recipientId, message) {
             console.log('Error: ', response.body.error);
         }
     });
-};
-
-// send rich message with bev
-function bevMessage(recipientId, text) {
-
-  text = text || "";
-  var values = text.split(' ');
-
-  if (values[0] === 'hsc') {
-    // if (Number(values[1]) > 0 && Number(values[2]) > 0) {
-
-    // var imageUrl = "https://lorempixel.com/" + Number(values[1]) + "/" + Number(values[2])+"/nightlife";
-		// var imageUrl = "https://lorempixel.com/640/480/nightlife";
-
-		// message = {
-		// 	"attachment": {
-		// 		"type": "template",
-		// 		"payload": {
-		// 			"template_type": "generic",
-		// 			"elements": [{
-		// 				"title": "Nightlife",
-		// 				"subtitle": "The bevs are truly on",
-		// 				"image_url": imageUrl ,
-		// 				"buttons": [{
-		// 					"type": "web_url",
-		// 					"url": imageUrl,
-		// 					"title": "Show bevs"
-		// 				}, {
-  //             "type": "postback",
-  //             "title": "I like this",
-  //             "payload": "User " + recipientId + " likes bev " + imageUrl,
-  //           }]
-  //         }]
-  //       }
-  //     }
-		// };
-
-    // sendMessage(recipientId, message);
-		sendMessage(recipientId, {text: 'just shoot me now fam.'});
-
-		return true;
-        // }
-  } else {
-
-    // sendMessage(recipientId, message);
-		sendMessage(recipientId, {text: 'HSCCC!!!!!!! :('});
-
-		return true;
-  }
-
-  return false;
-
 };
