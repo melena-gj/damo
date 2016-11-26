@@ -37,7 +37,8 @@ app.post('/webhook', function (req, res) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-    		if (!banterTheUser(event.sender.id, event.postback.payload)) {
+        		sendMessage(event.sender.id, {text: event.postback.payload});
+    				if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         }
@@ -69,6 +70,7 @@ function banterTheUser(recipientID, text) {
     text = text || "";
     var values = text.split(' ');
 
+    //1st layer
     if (values[0]==="Careers") {
     	sendMessage(recipientID, {text: "u have no career m8"});
     	return true;
