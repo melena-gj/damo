@@ -1,13 +1,13 @@
 {
   "name": "damo",
   "version": "1.0.0",
-  "description": "Damo TestBot Server App",
+  "description": "Damo Mate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Raymond Wan",
+  "author": "Mitch Ball",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
