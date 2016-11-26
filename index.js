@@ -80,6 +80,7 @@ function banterTheUser(recipientID, text) {
     //1st layer
     if (values[0]==="Careers") {
     	sendMessage(recipientID, {text: "u have no career m8"});
+        quick_reply("1", "2", "3");
     	return true;
     } else if (values[0]==="Exams") {
     	sendMessage(recipientID, {text: "u'r going to fail ur exams"});
@@ -103,6 +104,43 @@ function banterTheUser(recipientID, text) {
     //4th layer
 
     return false;
+}
+
+function quick_reply(option1, option2, option3) {
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
+        method: 'POST',
+        json: {
+            recipient: {id: recipientId},
+            message:{
+                text:   "Pick a color:",
+                quick_replies:[
+                    {
+                        content_type:   "text",
+                        title:          option1,
+                        payload:        1
+                    },
+                    {
+                        content_type:   "text",
+                        title:          option2,
+                        payload:        2
+                    },
+                    {
+                        content_type:   "text",
+                        title:          option3,
+                        payload:        3
+                    },
+                ]
+            }
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending message: ', error);
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error);
+        }
+    });
 }
 
 function persistent_menu() {
