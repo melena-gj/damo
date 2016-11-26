@@ -53,5 +53,10 @@ function sendMessage(recipientId, message) {
     });
 };
 
+//questions to ask start asking what the user wants
+function findOutUserRequirements(recipientID, text) {
+    
+}
+
 // Page Access Token
 // EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD
