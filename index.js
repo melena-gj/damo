@@ -33,6 +33,7 @@ app.post('/webhook', function (req, res) {
           sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
         }
       }
+    }
   }
   res.sendStatus(200);
 };
