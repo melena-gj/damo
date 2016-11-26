@@ -84,7 +84,8 @@ app.post('/webhook', function (req, res) {
         } else if (event.postback) {
     		//ignore the initial "Get started" button
     			if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
-        		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Do any of these areas interest you?"});
+        		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress."});
+            messageHelper(event.sender.id, {text: "Check out the options in the menu below and if you want to talk about one give it a click."});
     			} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
           }
@@ -139,7 +140,7 @@ function banterTheUser(recipientID, text) {
       case "Refer":
         sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
-      case "Option 1 Here"
+      case "Option 1 Here":
         sendMessage(recipientID, {text: "Who even needs JSON"});
         break;
     }
