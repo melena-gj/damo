@@ -84,8 +84,7 @@ app.post('/webhook', function (req, res) {
         } else if (event.postback) {
     		//ignore the initial "Get started" button
     			if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
-        		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress."});
-            messageHelper(event.sender.id, {text: "Check out the options in the menu below and if you want to talk about one give it a click."});
+        		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Check out the options in the menu below and if you want to talk about one give it a click."});
     			} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
           }
@@ -124,8 +123,9 @@ function banterTheUser(recipientID, text) {
 
 
     switch(text){
+
+      // layer 1
       case "careers":
-        // sendMessage(recipientID, {text: "u have no career m8"});
         quick_reply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
@@ -140,17 +140,13 @@ function banterTheUser(recipientID, text) {
       case "refer":
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
+      // layer 2
       case "Yep!":
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
     }
     return true
 
-    //2nd layer
-
-    //3rd layer
-
-    //4th layer
 
     return false;
 }
