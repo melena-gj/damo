@@ -24,12 +24,18 @@ app.get('/webhook', function (req, res) {
 
 // handler receiving messages
 app.post('/webhook', function (req, res) {
+    // Create a menu at startup
+    persistent_menu();
+
     var events = req.body.entry[0].messaging;
     for (i = 0; i < events.length; i++) {
         var event = events[i];
+
         if (event.message && event.message.text) {
+            // Debug message
         	sendMessage(event.sender.id, {text: event.message.text});
-            persistent_menu();
+
+            // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
@@ -80,6 +86,51 @@ function banterTheUser(recipientID, text) {
     	return false;
     }
 }
+
+function persistent_menu() {
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/thread_settings',
+        qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
+        method: 'POST',
+        json: {
+            setting_type : "call_to_actions",
+            thread_state : "existing_thread",
+            call_to_actions:[
+                {
+                    type:   "postback",
+                    title:  "Careers",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
+                },
+                {
+                    type:   "postback",
+                    title:  "Exams",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
+                },
+                {
+                    type:   "postback",
+                    title:  "Study",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
+                },
+                {
+                    type:   "postback",
+                    title:  "Pressure from others",
+                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                },
+                {
+                    type:   "postback",
+                    title:  "Tell a friend about this",
+                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                }
+            ]
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending message: ', error);
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error);
+        }
+    });
+};
 
 // Page Access Token
 // EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD

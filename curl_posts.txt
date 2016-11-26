@@ -1,6 +1,6 @@
 //Persistent Menu
 
-curl -X POST -H "Content-Type: application/json" -d '{  
+curl -X POST -H "Content-Type: application/json" -d '{
   "setting_type" : "call_to_actions",
   "thread_state" : "existing_thread",
   "call_to_actions":[
@@ -22,6 +22,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
     {
       "type":"postback",
       "title":"Pressure from others",
+      "payload":"DEVELOPER_DEFINED_FOR_PRESSURE"
+    },
+    {
+      "type":"postback",
+      "title":"Tell a friend about this",
       "payload":"DEVELOPER_DEFINED_FOR_PRESSURE"
     }
   ]
@@ -46,4 +51,10 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "greeting":{
     "text":"Hey, old mate Damo here. Here to have a yarn with you about the old HSC."
   }
-}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"   
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
+
+
+curl -X DELETE -H "Content-Type: application/json" -d '{
+  "setting_type":"call_to_actions",
+  "thread_state":"existing_thread"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
