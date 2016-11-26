@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 // Facebook Webhook
 app.get('/webhook', function (req, res) {
   // res.send(req.query['hub.verify_token'])
-    if (req.query['hub.verify_token'] === 'cI0zv6MXkfC6') {
+    if (req.query['hub.verify_token'] === 'damo-token') {
         res.send(req.query['hub.challenge']);
     } else {
         res.send('Invalid verify token');
