@@ -24,43 +24,43 @@ app.get('/webhook', function (req, res) {
 
 // handler receiving messages
 app.post('/webhook', function (req, res) {
-  var data = req.body;
+    var data = req.body;
 
-  // Make sure this is a page subscription
-  if (data.object == 'page') {
-    // Iterate over each entry
-    // There may be multiple if batched
-    data.entry.forEach(function(pageEntry) {
-        var pageID = pageEntry.id;
-        var timeOfEvent = pageEntry.time;
+    // Make sure this is a page subscription
+    if (data.object == 'page') {
+        // Iterate over each entry
+        // There may be multiple if batched
+        data.entry.forEach(function(pageEntry) {
+            var pageID = pageEntry.id;
+            var timeOfEvent = pageEntry.time;
 
-        // Iterate over each messaging event
-        pageEntry.messaging.forEach(function(messagingEvent) {
-          	/*If we have time/know what to do, we could split the
-          		following if statements up into different functions*/
+            // Iterate over each messaging event
+            pageEntry.messaging.forEach(function(messagingEvent) {
+              	/*If we have time/know what to do, we could split the
+              		following if statements up into different functions*/
 
-          	//if we get a message request then we go through all the messages
-          	//and figure out what we need to reply with
-            if (messagingEvent.message) {
-                for (i = 0; i < events.length; i++) {
-    		        var event = events[i];
-    		        if (event.message && event.message.text) {
-    		            if (!banterTheUser(event.sender.id, event.message.text)) {
-    		                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
-    		            }
-    		        }
-    		    }
-            } else if (messagingEvent.postback) {
-                persistent_menu();
-                // sendMessage(event.sender.id, {text: "payload is: %d", event['postback'].payload});
-            } else {
-                console.log("Webhook received unknown messagingEvent: ", messagingEvent);
+              	//if we get a message request then we go through all the messages
+              	//and figure out what we need to reply with
+                if (messagingEvent.message) {
+                    for (i = 0; i < events.length; i++) {
+        		        var event = events[i];
+        		        if (event.message && event.message.text) {
+        		            if (!banterTheUser(event.sender.id, event.message.text)) {
+        		                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+        		            }
+        		        }
+        		    }
+                } else if (messagingEvent.postback) {
+                    persistent_menu();
+                    // sendMessage(event.sender.id, {text: "payload is: %d", event['postback'].payload});
+                } else {
+                    console.log("Webhook received unknown messagingEvent: ", messagingEvent);
+                }
             }
         }
+        res.sendStatus(200);
     }
-    res.sendStatus(200);
-  }
-});
+};
 
 // generic function sending messages
 function sendMessage(recipientId, message) {
