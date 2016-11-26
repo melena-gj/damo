@@ -33,6 +33,8 @@ app.post('/webhook', function (req, res) {
             if (!banterTheUser(event.sender.id, event.message.text)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
+        } else if (event.postback) {
+        		sendMessage(event.sender.id, {text: "postback"});
         }
     }
     res.sendStatus(200);
