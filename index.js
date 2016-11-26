@@ -25,13 +25,14 @@ app.get('/webhook', function (req, res) {
 // handler receiving messages
 app.post('/webhook', function (req, res) {
 	var events = req.body.entry[0].messaging;
-    for (i = 0; i < events.length; i++) {
-        var event = events[i];
-        if (event.message && event.message.text) {
-            if (!banterTheUser(event.sender.id, event.message.text)) {
-                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
-            }
+  for (i = 0; i < events.length; i++) {
+    var event = events[i];
+      if (event.message && event.message.text) {
+      	sendMessage(event.sender.id, {text: event.message.text});
+        if (!banterTheUser(event.sender.id, event.message.text)) {
+          sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
         }
+      }
     }
     res.sendStatus(200);
   }
