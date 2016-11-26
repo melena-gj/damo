@@ -146,14 +146,35 @@ function banterTheUser(recipientID, text) {
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
       case "sort of...":
-        quick_reply(recipientID, "I'm having doubts","Want more info","I'm worried I won't get the marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
+        quick_reply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
       case "not at all":
         messageHelper(recipientID, "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx")
         break;
       // layer 3
-      case "yep!":
-        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
+      // careers
+      case "yeah":
+        messageHelper(recipientID, {text: 'TODO'});
+        break;
+      case "nah":
+        messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
+        break;
+      case "i'm having doubts":
+        quick_reply(recipientID, "more info", "", "",
+        "Fair enough, It's pretty ridiculous that they make you make such a big decision so early on in your life. But you know what, I changed degrees 2 times mate, and plenty of my friends too :). Actually about 50% of students change their degree during their time at uni. Did you want more info?");
+        break;
+      case "want more info":
+        messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about
+        		 talking to friends, family or school counsellors? I think money is a pretty important factor ay ;)? Take a look at this:
+        		 http://www.payscale.com/research/AU/Country=Australia/Salary"});
+        break;
+      case "worried about marks":
+        messageHelper(recipientID, {text: 'TODO'});
+        break;
+      case "more info":
+        messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about
+        		 talking to friends, family or school counsellors?"});
+        messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
         break;
     }
     return true
