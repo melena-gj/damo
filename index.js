@@ -24,17 +24,22 @@ app.get('/webhook', function (req, res) {
 
 // handler receiving messages
 app.post('/webhook', function (req, res) {
+    // Create a menu at startup
+    persistent_menu();
+
     var events = req.body.entry[0].messaging;
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
+            // Debug message
         	sendMessage(event.sender.id, {text: event.message.text});
-            persistent_menu();
+
+            // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        		sendMessage(event.sender.id, {text: "postback"});
+    		sendMessage(event.sender.id, {text: "postback"});
         }
     }
     res.sendStatus(200);
