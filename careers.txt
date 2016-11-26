@@ -14,14 +14,14 @@ message: Oh wow. You're beating me then :).
 next: Yeah, Nah
 
 predecessor: sort of...
-message: Oh, are you having doubts about want you want? 
+message: Oh, are you having doubts about want you want?
          Or did you want more info about your choice?
          Unless, you're worried you won't get the marks to get in? O.o
 next: having doubts, want more info, worried you won't get the marks
 
 predecessor: Not at all
 message: Fair enough. It's pretty early in your life to have this figured out.
-         Tbh, to get inspiration, a good start is to talk to people, whether its family,
+         To be honest, to get inspiration, a good start is to talk to people, whether its family,
          friends, or school counsellors.
 
          A good place to get started would be this career quiz :)
@@ -32,8 +32,8 @@ next: ---
 
 predecessor: Yeah
 message: Ah mate, don't worry I was worried as hell. I wanted to get into computer
-		 science which required 89 when I was applying. My school was weird. The 
-		 principal gave each student 
+		 science which required 89 when I was applying. My school was weird. The
+		 principal gave each student
 next: MENU ITEMS (Exam, Study)
 
 predecessor: Nah
@@ -49,7 +49,7 @@ message: Fair enough, It's pretty ridiculous that they make you make such a
 next: more info, MENU ITEMS(ALL but Career)
 
 predecessor: want more info
-message: I don't have a huge amount of expirience myself but have you thought about
+message: I don't have a huge amount of experience myself but have you thought about
 		 talking to friends, family or school counsellors?
 
 		 I think money is a pretty important factor ay ;)? Take a look at this:
@@ -59,6 +59,6 @@ next: ---
 ======================================
 
 predecessor: more info
-message: I don't have a huge amount of expirience myself but have you thought about
+message: I don't have a huge amount of experience myself but have you thought about
 		 talking to friends, family or school counsellors?
 next: ---
