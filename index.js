@@ -81,6 +81,9 @@ function banterTheUser(recipientID, text) {
     } else if (values[0]==="Pressure") {
     	sendMessage(recipientID, {text: "just kill urself"});
     	return true;
+    } else if (values[0]==="Refer") {
+    	sendMessage(recipientID, {text: "you have no friends m7"});
+    	return true;
     }
 
     return false;
