@@ -149,8 +149,7 @@ function banterTheUser(recipientID, text) {
         quick_reply(recipientID, "I'm having doubts","Want more info","I'm worried I won't get the marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
       case "not at all":
-        messageHelper(recipientID, "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :)
-        http://joboutlook.gov.au/careerquiz.aspx")
+        messageHelper(recipientID, "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx")
         break;
       // layer 3
       case "yep!":
