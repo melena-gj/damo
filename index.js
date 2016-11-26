@@ -32,7 +32,7 @@ app.post('/webhook', function (req, res) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        		sendMessage(event.sender.id, {text: "postback"});
+        		sendMessage(event.sender.id, {text: event.postback.payload});
         }
     }
     res.sendStatus(200);
@@ -78,52 +78,6 @@ function banterTheUser(recipientID, text) {
     	return false;
     }
 }
-
-function persistent_menu() {
-    sendMessage(event.sender.id, {text: "Creating menu"});
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/thread_settings',
-        qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
-        method: 'POST',
-        json: {
-            setting_type : "call_to_actions",
-            thread_state : "existing_thread",
-            call_to_actions:[
-                {
-                    type:   "postback",
-                    title:  "Careers",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
-                },
-                {
-                    type:   "postback",
-                    title:  "Exams",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
-                },
-                {
-                    type:   "postback",
-                    title:  "Study",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
-                },
-                {
-                    type:   "postback",
-                    title:  "Pressure from others",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
-                },
-                {
-                    type:   "postback",
-                    title:  "Tell a friend about this",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
-                }
-            ]
-        }
-    }, function(error, response, body) {
-        if (error) {
-            console.log('Error sending message: ', error);
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error);
-        }
-    });
-};
 
 // Page Access Token
 // EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD
