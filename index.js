@@ -167,7 +167,7 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
     //       }
     //   ]
     // } else {
-      quickReplies: [
+      quickReplies = [
           {
               content_type:   "text",
               title:          option1,
