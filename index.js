@@ -127,7 +127,7 @@ function banterTheUser(recipientID, text) {
 
       // layer 1
       case "careers":
-        quick_reply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
+        quickReply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
         messageHelper(recipientID, {text: "u'r going to fail ur exams"});
@@ -144,10 +144,10 @@ function banterTheUser(recipientID, text) {
       // layer 2
       // careers
       case "yep!":
-        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
+        quickReply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
       case "sort of...":
-        quick_reply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
+        quickReply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
       case "not at all":
         messageHelper(recipientID, "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx")
@@ -161,7 +161,7 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
         break;
       case "i'm having doubts":
-        quick_reply(recipientID, "Want more info", "", "",
+        quickReply(recipientID, "Want more info", "", "",
         "Fair enough, It's pretty ridiculous that they make you make such a big decision so early on in your life. But you know what, I changed degrees 2 times mate, and plenty of my friends too :). Actually about 50% of students change their degree during their time at uni. Did you want more info?");
         break;
       case "want more info":
@@ -177,7 +177,7 @@ function banterTheUser(recipientID, text) {
     return false;
 }
 
-function quick_reply(recipientId, option1, option2, option3, messageText) {
+function quickReply(recipientId, option1, option2, option3, messageText) {
 
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
