@@ -137,7 +137,8 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: "u just might as well get drunk"});
         break;
       case "pressure":
-      	messageHelper(recipientID, {text: "just kill urself"});
+        // TODO make this four (missing the yourself option)
+      	quickReply(recipientI, "Family", "Friends", "Teachers", "Ahh that's a shame. It's quite common as well unfortunately :/ Remember to ask people for help and advice whenever you need it by the way. Who are you feeling pressured from?");
         break;
       case "refer":
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
@@ -169,8 +170,28 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about talking to friends, family or school counsellors? I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary Let me know if you want to talk about anything else in the menu."});
         break;
       case "worried about marks":
-        messageHelper(recipientID, {text: 'TODO'});
+        messageHelper(recipientID, {text: "TODO"});
         break;
+      // layer 2
+      // pressured
+      case "family":
+        quickReply("Yes I have", "No I haven't");
+        break;
+      case "friends":
+        messageHelper(recipientID, "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying. I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future.");
+        break;
+      case "teachers":
+        messageHelper(recipientID, "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying. I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future.");
+        break;
+      // layer 3
+      // pressured
+      case "yes i have":
+        messageHelper(recipientID, "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you. If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)")
+        break;
+      case "no i haven't":
+        messageHelper(recipientID, "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you.");
+        break;
+
     }
     return true
 

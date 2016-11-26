@@ -13,20 +13,20 @@ next: family, friends, teachers, yourself
 
 predecessor: family
 message: Ahhk, have you already discussed this with them?
-next: yes, no
+next: Yes I have, No I haven't
 
 predecessor: friends
-message: Ah yehp. TBH I think you should do what you think you should do, not what your friends do.
-         You will stay good friends with your best friends regardless of where you go. 
+message: Ah yep. TBH I think you should do what you think you should do, not what your friends do.
+         You will stay good friends with your best friends regardless of where you go.
          And theres nothing better than making new friends who love what you love where you end up studying.
-         I would have a chat with your family, a school career counsilor, and other people for their thoughts.
+         I would have a chat with your family, a school career counsellor, and other people for their thoughts.
          Always remember you can switch programs/ defer if you change your mind in the future.
 next: ----
 
 predecessor: teachers
-message: Oh, interesting. They may have your interests at heart, but tell them your thoughts if you havent yet.
+message: Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet.
          And theres nothing better than making new friends who love what you love where you end up studying.
-         I would ask your family, a school career councillor, and ultimiately yourself, what you want to do.
+         I would ask your family, a school career councillor, and ultimately yourself, what you want to do.
          Always remember you can switch programs/ defer if you change your mind in the future.
 next: ----
 
@@ -38,7 +38,7 @@ message: Ahh yes, high standards are a double edged sword.
          friends and family for help and advice, because they should often be pleased to give it.
          If the stress builds up, don't be afraid to ask for help. And give this a read if you want
          https://www.youthbeyondblue.com/do-something-about-it/surviving-year-12
-next: 
+next:
 
 =======================================
 > family:
@@ -49,10 +49,10 @@ message: Ahh, I understand that in some situations you can't simply go against t
          could give their degree a shot for a semester, but change program if you still think its not for you.
          If you were really set on following your own direction and not their desired one, remember that there
          are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)
-next: 
+next:
 
 predecessor: no
 message: I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts.
          If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to
          transfer and defer if it still doesn't gel for you.
-next: 
+next:
