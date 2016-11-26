@@ -34,20 +34,22 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text) {
             // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
-              setTimeout(sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."}), 3000);
-
+              messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
         		//ignore the initial "Get started" button
         		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
         		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
-
-                setTimeout(sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."}), 3000);
+                messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
             }
         }
     }
     res.sendStatus(200);
 });
+
+messageHelper(recipientId, message){
+  setTimeout(sendMessage(recipientId, message), 3000)
+}
 
 // generic function sending messages
 function sendMessage(recipientId, message) {
