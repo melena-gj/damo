@@ -141,7 +141,7 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
       // layer 2
-      case "Yep!":
+      case "yep!":
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
     }
@@ -152,6 +152,7 @@ function banterTheUser(recipientID, text) {
 }
 
 function quick_reply(recipientId, option1, option2, option3, messageText) {
+
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
