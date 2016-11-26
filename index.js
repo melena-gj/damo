@@ -37,8 +37,9 @@ app.post('/webhook', function (req, res) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        		sendMessage(event.sender.id, {text: event.postback.payload});
-    				if (!banterTheUser(event.sender.id, event.postback.payload)) {
+        		//ignore the initial "Get started" button
+        		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
+        		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         }
