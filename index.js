@@ -82,7 +82,6 @@ function banterTheUser(recipientID, text) {
 }
 
 function persistent_menu() {
-    sendMessage(event.sender.id, {text: "Creating menu"});
     request({
         url: 'https://graph.facebook.com/v2.6/me/thread_settings',
         qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
