@@ -34,13 +34,15 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text) {
             // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
-                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+              setTimeout(sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."}), 3000);
+
             }
         } else if (event.postback) {
         		//ignore the initial "Get started" button
         		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
         		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
-                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+
+                setTimeout(sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."}), 3000);
             }
         }
     }
@@ -49,7 +51,6 @@ app.post('/webhook', function (req, res) {
 
 // generic function sending messages
 function sendMessage(recipientId, message) {
-    await sleep(2000);
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
