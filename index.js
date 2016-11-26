@@ -32,16 +32,14 @@ app.post('/webhook', function (req, res) {
         var event = events[i];
 
         if (event.message && event.message.text) {
-            // Debug message
-        	sendMessage(event.sender.id, {text: event.message.text});
-
             // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        	sendMessage(event.sender.id, {text: event.postback.payload});
-            handlePostBack(event.sender.id, event.postback.payload);
+    		if (!banterTheUser(event.sender.id, event.postback.payload)) {
+                sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+            }
         }
     }
     res.sendStatus(200);
@@ -109,27 +107,27 @@ function persistent_menu() {
                 {
                     type:   "postback",
                     title:  "Careers",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
+                    payload:"Careers"
                 },
                 {
                     type:   "postback",
                     title:  "Exams",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
+                    payload:"Exams"
                 },
                 {
                     type:   "postback",
                     title:  "Study",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
+                    payload:"Study"
                 },
                 {
                     type:   "postback",
                     title:  "Pressure from others",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                    payload:"Pressure"
                 },
                 {
                     type:   "postback",
-                    title:  "Tell a friend about this",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                    title:  "Refer a friend about this",
+                    payload:"Refer"
                 }
             ]
         }
