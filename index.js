@@ -80,7 +80,7 @@ function banterTheUser(recipientID, text) {
     //1st layer
     if (values[0]==="Careers") {
     	sendMessage(recipientID, {text: "u have no career m8"});
-        quick_reply("1", "2", "3");
+        quick_reply(recipientID, "1", "2", "3");
     	return true;
     } else if (values[0]==="Exams") {
     	sendMessage(recipientID, {text: "u'r going to fail ur exams"});
@@ -106,7 +106,7 @@ function banterTheUser(recipientID, text) {
     return false;
 }
 
-function quick_reply(option1, option2, option3) {
+function quick_reply(recipientId, option1, option2, option3) {
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
