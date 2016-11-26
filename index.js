@@ -120,13 +120,12 @@ function sendMessage(recipientId, message) {
 //questions to ask start asking what the user wants
 function banterTheUser(recipientID, text) {
     text = text || "";
-    var values = text.split(' ');
 
 
-    switch(values[0]){
+    switch(text){
       case "Careers":
         // sendMessage(recipientID, {text: "u have no career m8"});
-        quick_reply(recipientID, "1", "2", "3");
+        quick_reply(recipientID, "Option 1 Here", "Option 2 Here", "Option 3 Here", "Yo the message goes here");
         break;
       case "Exams":
         sendMessage(recipientID, {text: "u'r going to fail ur exams"});
@@ -140,6 +139,9 @@ function banterTheUser(recipientID, text) {
       case "Refer":
         sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
+      case "Option 1 Here"
+        sendMessage(recipientID, {text: "Who even needs JSON"});
+        break;
     }
     return true
 
@@ -152,7 +154,7 @@ function banterTheUser(recipientID, text) {
     return false;
 }
 
-function quick_reply(recipientId, option1, option2, option3) {
+function quick_reply(recipientId, option1, option2, option3, messageText) {
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
@@ -160,7 +162,7 @@ function quick_reply(recipientId, option1, option2, option3) {
         json: {
             recipient: {id: recipientId},
             message:{
-                text:   "Pick a color:",
+                text:   messageText,
                 quick_replies:[
                     {
                         content_type:   "text",
