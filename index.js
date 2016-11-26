@@ -142,7 +142,7 @@ function banterTheUser(recipientID, text) {
         break;
       // layer 2
       case "yep!":
-        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
+        quick_reply(recipientID, "Yeah","Nah","Breaks stuff","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
     }
     return true
@@ -153,38 +153,38 @@ function banterTheUser(recipientID, text) {
 
 function quick_reply(recipientId, option1, option2, option3, messageText) {
 
-    // if(option1 && option2 && !option3){
-    //   quickReplies: [
-    //       {
-    //           content_type:   "text",
-    //           title:          option1,
-    //           payload:        1
-    //       },
-    //       {
-    //           content_type:   "text",
-    //           title:          option2,
-    //           payload:        2
-    //       }
-    //   ]
-    // } else {
-      // quickReplies = [
-      //     {
-      //         content_type:   "text",
-      //         title:          option1,
-      //         payload:        1
-      //     },
-      //     {
-      //         content_type:   "text",
-      //         title:          option2,
-      //         payload:        2
-      //     },
-      //     {
-      //         content_type:   "text",
-      //         title:          option3,
-      //         payload:        3
-      //     }
-      // ]
-    // }
+    if(option1 && option2 && !option3){
+      quickReplies: [
+          {
+              content_type:   "text",
+              title:          option1,
+              payload:        1
+          },
+          {
+              content_type:   "text",
+              title:          option2,
+              payload:        2
+          }
+      ]
+    } else {
+      quickReplies = [
+          {
+              content_type:   "text",
+              title:          option1,
+              payload:        1
+          },
+          {
+              content_type:   "text",
+              title:          option2,
+              payload:        2
+          },
+          {
+              content_type:   "text",
+              title:          option3,
+              payload:        3
+          }
+      ]
+    }
 
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -194,23 +194,7 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
             recipient: {id: recipientId},
             message:{
                 text:   messageText,
-                quickReplies: [
-                    {
-                        content_type:   "text",
-                        title:          option1,
-                        payload:        1
-                    },
-                    {
-                        content_type:   "text",
-                        title:          option2,
-                        payload:        2
-                    },
-                    {
-                        content_type:   "text",
-                        title:          option3,
-                        payload:        3
-                    }
-                ]
+                quickReplies: quickReplies
             }
         }
     }, function(error, response, body) {
