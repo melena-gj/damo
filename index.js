@@ -121,6 +121,7 @@ function sendMessage(recipientId, message) {
 function banterTheUser(recipientID, text) {
     text = text.toLowerCase() || "";
 
+    messageHelper(recipientID, {text: 'Debug: '+text});
 
     switch(text){
 
