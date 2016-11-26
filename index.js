@@ -40,7 +40,8 @@ app.post('/webhook', function (req, res) {
                 sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
             }
         } else if (event.postback) {
-        		sendMessage(event.sender.id, {text: event.postback.payload});
+        	sendMessage(event.sender.id, {text: event.postback.payload});
+            handlePostBack(event.sender.id, event.postback.payload);
         }
     }
     res.sendStatus(200);
@@ -82,9 +83,18 @@ function banterTheUser(recipientID, text) {
     } else if (values[0]==="Pressure") {
     	sendMessage(recipientID, {text: "just kill urself"});
     	return true;
-    } else {
-    	return false;
     }
+
+    return false;
+}
+
+function handlePostBack(recipientId, case) {
+    if (case === 'REFERRAL') {
+        // Refer somehow
+
+    }
+
+    // Different cases
 }
 
 function persistent_menu() {
