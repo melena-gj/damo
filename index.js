@@ -141,6 +141,17 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
         break;
       // layer 2
+      // careers
+      case "yep!":
+        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
+        break;
+      case "sort of...!":
+        quick_reply(recipientID, "I'm having doubts","Want more info","I'm worried I won't get the marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
+        break;
+      case "not at all":
+        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
+        break;
+      // layer 3
       case "yep!":
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;

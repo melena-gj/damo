@@ -49,9 +49,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
 curl -X POST -H "Content-Type: application/json" -d '{
   "setting_type":"greeting",
   "greeting":{
-    "text":"Hey, old mate Damo here. Here to have a yarn with you about the old HSC."
+    "text":"Just like talking to your old mate Damo."
   }
-}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAExoT6aGqebPVFDty6tUUngZBmxJB59oholnZChWC7ZCb7nSIPLyprj5tyvbwIdMYi9ewz1xZBeWtx4wJzqZBcOQp6TBRxLpbZCpUekZBZAlA6sqZBD4aZAD02ZCQbw0j2JWAjrNXZAmrRytxgYZAc1fWccbtZANeDac9XDgZDZD"
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAIbXYKgzQMBAKC7czYnNMZCihFHjYzYaZB8kL3y5KGf6iH1M8SoSqJ42770exgqip3liQMwQopCUW5wweiLkrbxZCx7ZCzBfZCaG2QcuqveGO3Rv35CHEoXiVZAIQZBeTs8L4dWbG66aqOmdh7AYxKq883DDuYZBrODkFxMur9w2AZDZD"
 
 
 curl -X DELETE -H "Content-Type: application/json" -d '{
