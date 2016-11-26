@@ -160,10 +160,10 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
         break;
       case "i'm having doubts":
-        quick_reply(recipientID, "More info", "", "",
+        quick_reply(recipientID, "Want more info", "", "",
         "Fair enough, It's pretty ridiculous that they make you make such a big decision so early on in your life. But you know what, I changed degrees 2 times mate, and plenty of my friends too :). Actually about 50% of students change their degree during their time at uni. Did you want more info?");
         break;
-      case "more info":
+      case "want more info":
         messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about talking to friends, family or school counsellors? I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary"});
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
         break;
