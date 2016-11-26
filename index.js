@@ -52,7 +52,7 @@ app.post('/webhook', function (req, res) {
     		    }
             } else if (messagingEvent.postback) {
                 persistent_menu();
-                sendMessage(event.sender.id, {text: "payload is: %d", event.postback.payload});
+                // sendMessage(event.sender.id, {text: "payload is: %d", event['postback'].payload});
             } else {
                 console.log("Webhook received unknown messagingEvent: ", messagingEvent);
             }
