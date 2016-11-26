@@ -153,20 +153,20 @@ function banterTheUser(recipientID, text) {
 
 function quick_reply(recipientId, option1, option2, option3, messageText) {
 
-    if(option1 && option2 && !option3){
-      quickReplies: [
-          {
-              content_type:   "text",
-              title:          option1,
-              payload:        1
-          },
-          {
-              content_type:   "text",
-              title:          option2,
-              payload:        2
-          }
-      ]
-    } else {
+    // if(option1 && option2 && !option3){
+    //   quickReplies: [
+    //       {
+    //           content_type:   "text",
+    //           title:          option1,
+    //           payload:        1
+    //       },
+    //       {
+    //           content_type:   "text",
+    //           title:          option2,
+    //           payload:        2
+    //       }
+    //   ]
+    // } else {
       quickReplies: [
           {
               content_type:   "text",
@@ -184,7 +184,7 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
               payload:        3
           }
       ]
-    }
+    // }
 
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
