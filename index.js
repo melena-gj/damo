@@ -99,27 +99,27 @@ function persistent_menu() {
                 {
                     type:   "postback",
                     title:  "Careers",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
+                    payload:"Careers"
                 },
                 {
                     type:   "postback",
                     title:  "Exams",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
+                    payload:"Exams"
                 },
                 {
                     type:   "postback",
                     title:  "Study",
-                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
+                    payload:"Study"
                 },
                 {
                     type:   "postback",
                     title:  "Pressure from others",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                    payload:"Pressure"
                 },
                 {
                     type:   "postback",
-                    title:  "Tell a friend about this",
-                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                    title:  "Refer a friend about this",
+                    payload:"Refer"
                 }
             ]
         }
