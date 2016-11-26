@@ -33,10 +33,9 @@ app.post('/webhook', function (req, res) {
           sendMessage(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
         }
       }
-    }
-    res.sendStatus(200);
   }
-});
+  res.sendStatus(200);
+};
 
 // generic function sending messages
 function sendMessage(recipientId, message) {
