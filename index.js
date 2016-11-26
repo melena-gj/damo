@@ -167,23 +167,23 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
     //       }
     //   ]
     // } else {
-      quickReplies = [
-          {
-              content_type:   "text",
-              title:          option1,
-              payload:        1
-          },
-          {
-              content_type:   "text",
-              title:          option2,
-              payload:        2
-          },
-          {
-              content_type:   "text",
-              title:          option3,
-              payload:        3
-          }
-      ]
+      // quickReplies = [
+      //     {
+      //         content_type:   "text",
+      //         title:          option1,
+      //         payload:        1
+      //     },
+      //     {
+      //         content_type:   "text",
+      //         title:          option2,
+      //         payload:        2
+      //     },
+      //     {
+      //         content_type:   "text",
+      //         title:          option3,
+      //         payload:        3
+      //     }
+      // ]
     // }
 
     request({
@@ -194,7 +194,23 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
             recipient: {id: recipientId},
             message:{
                 text:   messageText,
-                quickReplies: quickReplies
+                quickReplies: [
+                    {
+                        content_type:   "text",
+                        title:          option1,
+                        payload:        1
+                    },
+                    {
+                        content_type:   "text",
+                        title:          option2,
+                        payload:        2
+                    },
+                    {
+                        content_type:   "text",
+                        title:          option3,
+                        payload:        3
+                    }
+                ]
             }
         }
     }, function(error, response, body) {
