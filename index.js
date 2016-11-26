@@ -79,7 +79,7 @@ function banterTheUser(recipientID, text) {
 
     //1st layer
     if (values[0]==="Careers") {
-    	sendMessage(recipientID, {text: "u have no career m8"});
+    	// sendMessage(recipientID, {text: "u have no career m8"});
         quick_reply(recipientID, "1", "2", "3");
     	return true;
     } else if (values[0]==="Exams") {
@@ -130,7 +130,7 @@ function quick_reply(recipientId, option1, option2, option3) {
                         content_type:   "text",
                         title:          option3,
                         payload:        3
-                    },
+                    }
                 ]
             }
         }
