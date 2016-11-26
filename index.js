@@ -82,7 +82,6 @@ function banterTheUser(recipientID, text) {
 
 }
 
-
 function persistent_menu() {
     request({
         url: 'https://graph.facebook.com/v2.6/me/thread_settings',
@@ -92,26 +91,31 @@ function persistent_menu() {
             setting_type : "call_to_actions",
             thread_state : "existing_thread",
             call_to_actions:[
-              {
-                type:   "postback",
-                title:  "Careers",
-                payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
-              },
-              {
-                type:   "postback",
-                title:  "Exams",
-                payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
-              },
-              {
-                type:   "postback",
-                title:  "Study",
-                payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
-              },
-              {
-                type:   "postback",
-                title:  "Pressure from others",
-                payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
-              }
+                {
+                    type:   "postback",
+                    title:  "Careers",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_CAREERS"
+                },
+                {
+                    type:   "postback",
+                    title:  "Exams",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_EXAMS"
+                },
+                {
+                    type:   "postback",
+                    title:  "Study",
+                    payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_STUDY"
+                },
+                {
+                    type:   "postback",
+                    title:  "Pressure from others",
+                    payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                },
+                {
+                  type:   "postback",
+                  title:  "Tell a friend about this",
+                  payload:"DEVELOPER_DEFINED_FOR_PRESSURE"
+                }
             ]
         }
     }, function(error, response, body) {
