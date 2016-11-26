@@ -50,11 +50,10 @@ app.post('/webhook', function (req, res) {
 		          }
 		        }
 		    	}
-        } else if (messagingEvent.postback) {
-          sendMessage(event.sender.id, {text: "payload"});
-        } else {
-          console.log("Webhook received unknown messagingEvent: ", messagingEvent);
-        }
+        } 
+        // else if (messagingEvent.postback) {
+        //   sendMessage(event.sender.id, {text: "payload"});
+        // }
       });
     });
 
