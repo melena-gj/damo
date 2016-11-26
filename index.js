@@ -146,7 +146,8 @@ function banterTheUser(recipientID, text) {
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
       case "sort of...!":
-        quick_reply(recipientID, "I'm having doubts","Want more info","I'm worried I won't get the marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
+        // quick_reply(recipientID, "I'm having doubts","Want more info","I'm worried I won't get the marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
+        quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
         break;
       case "not at all":
         quick_reply(recipientID, "Yeah","Nah","","Oh wow. You're beating me then :). Are you worried your not going to get in?")
