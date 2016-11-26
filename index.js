@@ -123,23 +123,41 @@ function banterTheUser(recipientID, text) {
     var values = text.split(' ');
 
     //1st layer
-    if (values[0]==="Careers") {
-    	// sendMessage(recipientID, {text: "u have no career m8"});
+    // if (values[0]==="Careers") {
+    // 	// sendMessage(recipientID, {text: "u have no career m8"});
+    //     quick_reply(recipientID, "1", "2", "3");
+    // 	return true;
+    // } else if (values[0]==="Exams") {
+    // 	sendMessage(recipientID, {text: "u'r going to fail ur exams"});
+    // 	return true;
+    // } else if (values[0]==="Study") {
+    // 	sendMessage(recipientID, {text: "u just might as well get drunk"});
+    // 	return true;
+    // } else if (values[0]==="Pressure") {
+    // 	sendMessage(recipientID, {text: "just kill urself"});
+    // 	return true;
+    // } else if (values[0]==="Refer") {
+    // 	sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
+    //
+    // 	return true;
+    // }
+    switch(values[0]){
+      case "Careers":
+        // sendMessage(recipientID, {text: "u have no career m8"});
         quick_reply(recipientID, "1", "2", "3");
-    	return true;
-    } else if (values[0]==="Exams") {
-    	sendMessage(recipientID, {text: "u'r going to fail ur exams"});
-    	return true;
-    } else if (values[0]==="Study") {
-    	sendMessage(recipientID, {text: "u just might as well get drunk"});
-    	return true;
-    } else if (values[0]==="Pressure") {
-    	sendMessage(recipientID, {text: "just kill urself"});
-    	return true;
-    } else if (values[0]==="Refer") {
-    	sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
-
-    	return true;
+        return true;
+      case: "Exams":
+        sendMessage(recipientID, {text: "u'r going to fail ur exams"});
+        return true;
+      case "Study":
+        sendMessage(recipientID, {text: "u just might as well get drunk"});
+      	return true;
+      case "Pressure":
+      	sendMessage(recipientID, {text: "just kill urself"});
+      	return true;
+      case "Refer":
+        sendMessage(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
+      	return true;
     }
 
     //2nd layer
