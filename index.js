@@ -194,7 +194,23 @@ function quick_reply(recipientId, option1, option2, option3, messageText) {
             recipient: {id: recipientId},
             message:{
                 text:   messageText,
-                quickReplies: quickReplies
+                quickReplies: [
+                    {
+                        content_type:   "text",
+                        title:          'thisisbroken1',
+                        payload:        1
+                    },
+                    {
+                        content_type:   "text",
+                        title:          'thisisbroken2',
+                        payload:        2
+                    },
+                    {
+                        content_type:   "text",
+                        title:          'thisisbroken3',
+                        payload:        3
+                    }
+                ]
             }
         }
     }, function(error, response, body) {
