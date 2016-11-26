@@ -39,7 +39,7 @@ app.post('/webhook', function (req, res) {
         } else if (event.postback) {
         		//ignore the initial "Get started" button
         		if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
-        				sendMessage(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Do any of these areas interest you?"});
+        				messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Do any of these areas interest you?"});
         		} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
                 messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
             }
@@ -49,7 +49,8 @@ app.post('/webhook', function (req, res) {
 });
 
 messageHelper(recipientId, message){
-  setTimeout(sendMessage(recipientId, message), 3000)
+  // setTimeout(sendMessage(recipientId, message), 3000)
+  sendMessage(recipientId, message)
 }
 
 // generic function sending messages
