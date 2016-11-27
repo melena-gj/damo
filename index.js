@@ -129,7 +129,7 @@ function banterTheUser(recipientID, text) {
       // layer 2
       // pressured
       case "family":
-        quickReply("Yes I have", "No I haven't");
+        quickReply(recipientID, "Yes I have", "No I haven't", "I should", "Ahhk, have you already discussed this with them?");
         break;
       case "friends":
         messageHelper(recipientID, {text: "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying. I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future."});
@@ -145,6 +145,8 @@ function banterTheUser(recipientID, text) {
       case "no i haven't":
         messageHelper(recipientID, {text: "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you."});
         break;
+      case "i should":
+      	messageHelper(recipientID, {text: "Yes you should :D Pick a time that's suitable for you and go for it."});
       // layer 2
       // Exams
       case "class test":
