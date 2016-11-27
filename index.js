@@ -122,7 +122,7 @@ function banterTheUser(recipientID, text) {
     text = text.toLowerCase() || "";
 
     // This will stop other message sending and shit it seems but will help you debug regardless
-    // messageHelper(recipientID, {text: 'Debug: '+text});
+    messageHelper(recipientID, {text: 'Debug: '+text});
 
     switch(text){
 
