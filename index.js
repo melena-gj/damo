@@ -105,7 +105,7 @@ function banterTheUser(recipientID, text) {
       case "sort of...":
         quickReply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
-      case "Not at all":
+      case "not at all":
         messageHelper(recipientID, {text: "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors."});
       	messageHelper(recipientID, {text: "A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"});
         break;
