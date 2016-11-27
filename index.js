@@ -136,7 +136,8 @@ function banterTheUser(recipientID, text) {
         	messageHelper(recipientID, {text: "I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future."});
         break;
       case "teachers":
-        messageHelper(recipientID, {text: "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying. I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future."});
+        messageHelper(recipientID, {text: "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying."});
+        	messageHelper(recipientID, {text: "I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future."});
         break;
       // layer 3
       // pressured
