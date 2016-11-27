@@ -187,7 +187,10 @@ function banterTheUser(recipientID, text) {
     		messageHelper(recipientID, {text: "There are a number of ways you can improve your work ethic and develop a disciplined approach to your studies. These are some of the areas I would reccomend."});
     		break;
     	case "notetaking":
-    		messageHelper(recipientID, {text: "Keeping notes throughout the year will give you a good basis for revision later. Here are some tips for taking effective notes. Be consistent: use the same type of book or notepad throughout the year. Keep track of the section of syllabus your notes are relevant to. At the end of each week, skim over your notes and highlight important sections to help you access the content more efficiently towards the end of the year or before an exam. Every few weeks, skim your notes and type up a brief summary of the topics. These super-condensed summaries of your work will be perfect to trigger your memory towards the end of the year. Annotate them with the sections of syllabus they refer to. Good Luck!"});
+    		messageHelper(recipientID, {text: "Keeping notes throughout the year will give you a good basis for revision later. Here are some tips for taking effective notes. Be consistent: use the same type of book or notepad throughout the year. "});
+    		messageHelper(recipientID, {text: "Keep track of the section of syllabus your notes are relevant to. At the end of each week, skim over your notes and highlight important sections to help you access the content more efficiently towards the end of the year or before an exam. "});
+    			messageHelper(recipientID, {text: "Every few weeks, skim your notes and type up a brief summary of the topics. These super-condensed summaries of your work will be perfect to trigger your memory towards the end of the year. "});
+    				messageHelper(recipientID, {text: "Annotate them with the sections of syllabus they refer to. Good Luck!"});
     		break;
 
 
