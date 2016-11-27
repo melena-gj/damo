@@ -88,7 +88,7 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Class Test", "Half yearlies or Trials", "HSC", "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?");
         break;
       case "study":
-        quickReply(recipientID, "I have plenty of time", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
+        quickReply(recipientID, "I have ages", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
         break;
       case "pressure from others":
         // TODO make this four (missing the yourself option)
@@ -158,7 +158,7 @@ function banterTheUser(recipientID, text) {
     		break;
     	// layer 2
     	// Study
-    	case "i have plenty of time":
+    	case "i have ages":
     		quickReply(recipientID, "Assignment or project", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
     		break;
     	case "need tips fast!":
