@@ -111,7 +111,7 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // careers
       case "yeah":
-        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks (it might be worth researching these to put your mind at rest). Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
+        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
