@@ -90,7 +90,7 @@ function banterTheUser(recipientID, text) {
       case "study":
         quickReply(recipientID, "I have plenty of time", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
         break;
-      case "pressure from others":
+      case "pressure":
         // TODO make this four (missing the yourself option)
       	quickReply(recipientID, "Family", "Friends", "Teachers", "Ahh that's a shame. It's quite common as well unfortunately. Remember to ask people for help and advice whenever you need it by the way. Who are you feeling pressured from?");
         break;
