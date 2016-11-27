@@ -139,7 +139,25 @@ function banterTheUser(recipientID, text) {
     		break;
     	// layer 2
     	// Study
-    	case "": 
+    	case "i have plenty of time":
+    		quickReply(recipientID, "Assignment or project", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
+    		break;
+    	case "need tips fast!":
+    		messageHelper(recipientID, "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas.");
+    		break;
+    	//layer 3
+    	//Study
+    	case "assignment or projects":
+    		messageHelper(recipientID, "Assignments and projects are a useful task to develop your work ethic and goal management. What sort of help do you need?");
+    		break;
+    	case "study habits":
+    		messageHelper(recipientID, "There are a number of ways you can improve your work ethic and develop a disciplined approach to your studies. These are some of the areas I would reccomend.");
+    		break;
+    	case "notetaking":
+    		messageHelper(recipientID, "Keeping notes throughout the year will give you a good basis for revision later. Here are some tips for taking effective notes. Be consistent: use the same type of book or notepad throughout the year. Keep track of the section of syllabus your notes are relevant to. At the end of each week, skim over your notes and highlight important sections to help you access the content more efficiently towards the end of the year or before an exam. Every few weeks, skim your notes and type up a brief summary of the topics. These super-condensed summaries of your work will be perfect to trigger your memory towards the end of the year. Annotate them with the sections of syllabus they refer to. Good Luck!");
+    		break;
+
+
         default:
             return false;
 
