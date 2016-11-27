@@ -157,7 +157,7 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // careers
       case "yeah":
-        messageHelper(recipientID, {text: 'TODO'});
+        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks (it might be worth researching these to put your mind at rest). Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."})
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
@@ -170,7 +170,7 @@ function banterTheUser(recipientID, text) {
         messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about talking to friends, family or school counsellors? I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary Let me know if you want to talk about anything else in the menu."});
         break;
       case "worried about marks":
-        messageHelper(recipientID, {text: "TODO"});
+        messageHelper(recipientID, {text: "Oh, well at the very worst, if you don't get the marks you need, there are other pathways into the courses you want. If it puts your mind at ease, take some time research some of these pathways for the course you want. Otherwise, remember to put everything in perspective, and approach your exams calmly and methodically."});
         break;
       // layer 2
       // pressured

@@ -25,15 +25,15 @@ next: Guilt, Anxiety or Fear, I don't know my priorities
 =======================================
 
 predecessor: Need tips FAST!
-message: Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas 
+message: Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas
 next:
 
 predecessor: I have heaps of time
-message: Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory. 
+message: Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.
 next: Assignment or project, Study habits, Notetaking, Organisation tips
 
 predecessor: Class test
-message: Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand. 
+message: Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand.
 next:
 
 predecessor: Half yearlies or Trials
@@ -59,6 +59,5 @@ message: Keeping notes throughout the year will give you a good basis for revisi
 next:
 
 predecessor: Organisation tips
-message: The best way to keep your notes and work organised is to group them. Group your work by topic, and keep it in order. 
+message: The best way to keep your notes and work organised is to group them. Group your work by topic, and keep it in order.
 next:
-
