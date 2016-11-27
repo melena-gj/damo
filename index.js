@@ -224,17 +224,17 @@ function quickReply(recipientId, option1, option2, option3, messageText) {
                     {
                         content_type:   "text",
                         title:          option1,
-                        payload:        1
+                        payload:        option1
                     },
                     {
                         content_type:   "text",
                         title:          option2,
-                        payload:        2
+                        payload:        option2
                     },
                     {
                         content_type:   "text",
                         title:          option3,
-                        payload:        3
+                        payload:        option3
                     }
                 ]
             }
