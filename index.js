@@ -138,7 +138,7 @@ function banterTheUser(recipientID, text) {
         break;
       case "pressure from others":
         // TODO make this four (missing the yourself option)
-      	quickReply(recipientI, "Family", "Friends", "Teachers", "Ahh that's a shame. It's quite common as well unfortunately :/ Remember to ask people for help and advice whenever you need it by the way. Who are you feeling pressured from?");
+      	quickReply(recipientID, "Family", "Friends", "Teachers", "Ahh that's a shame. It's quite common as well unfortunately :/ Remember to ask people for help and advice whenever you need it by the way. Who are you feeling pressured from?");
         break;
       case "refer":
         messageHelper(recipientID, {text: "Tell your friends about us at http://m.me/Damo"});
