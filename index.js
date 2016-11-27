@@ -88,7 +88,7 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Class Test", "Half yearlies or Trials", "HSC", "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?");
         break;
       case "study":
-        quickReply(recipientID, "I have plenty of time", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
+        quickReply(recipientID, "I have ages", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
         break;
       case "pressure":
         // TODO make this four (missing the yourself option)
@@ -111,7 +111,7 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // careers
       case "yeah":
-        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks (it might be worth researching these to put your mind at rest). Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
+        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
@@ -160,8 +160,8 @@ function banterTheUser(recipientID, text) {
     		break;
     	// layer 2
     	// Study
-    	case "i have plenty of time":
-    		quickReply(recipientID, "Assignment or project", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
+    	case "i have ages":
+    		quickReply(recipientID, "Assignment/projects", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
     		break;
     	case "need tips fast!":
     		messageHelper(recipientID, {text: "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas."});
@@ -171,7 +171,7 @@ function banterTheUser(recipientID, text) {
     		break;
     	//layer 3
     	//Study
-    	case "assignment or projects":
+    	case "assignment/projects":
     		messageHelper(recipientID, {text: "Assignments and projects are a useful task to develop your work ethic and goal management. What sort of help do you need?"});
     		break;
     	case "study habits":
