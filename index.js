@@ -131,10 +131,10 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
-        quickReply(recipientID, {text: "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?"});
+        messageHelper(recipientID, {text: "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?"});
         break;
       case "study":
-        quickReply(recipientID, {text: "u just might as well get drunk"});
+        messageHelper(recipientID, {text: "u just might as well get drunk"});
         break;
       case "pressure":
         // TODO make this four (missing the yourself option)
@@ -193,13 +193,13 @@ function banterTheUser(recipientID, text) {
         break;
       // layer 2
       // Exams
-      case "Class Test":
+      case "class test":
       	messageHelper(recipientID, "Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand.");
       	break;
-      case "Half yearlies or Trials":
+      case "half yearlies or trials":
       	messageHelper(recipientID, "The aim of these exams is to simulate the HSC environment. Use this opportunity to check whether your summaries are effective.");
     		break;
-    	case "HSC":
+    	case "hsc":
     		messageHelper("recipientID, This is the time to do as many past papers as you can. Make sure you cover all areas of your syllabus.");
     		break;
 
