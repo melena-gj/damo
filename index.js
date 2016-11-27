@@ -3,51 +3,6 @@ var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
 
-var jsonObj = [
-{
-    id: 1,
-    message: "Do you already know what you want to study?",
-    next: [
-        { id: 11, button: "Yep!" },
-        { id: 12, button: "sort of..."  },
-        { id: 13, button: "Not at all"  }
-    ]
-},
-{
-    id: 11,
-    message: "Oh wow. You're beating me then :). Are you worried your not going to get in?",
-    next: [
-        { id: 111, button: "Yeah" },
-        { id: 112, button: "Nah" }
-    ]
-},
-{
-    id: 12,
-    message: "Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o",
-    next: [
-        { id: 121, button: "having doubts" },
-        { id: 122, button: "want more info" }
-    ]
-},
-{
-    id: 13,
-    message: "Fair enough. It's pretty early in your life to have this figured out. Tbh, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors."
-},
-{
-    id: 111,
-    message: "Ah mate, don't worry I was worried as hell. I wanted to get into computer science which required 89 when I was applying. My school was weird. The principal gave each student"
-},
-{
-    id: 112,
-    message: "Alright, anything else you wanted to chat about mate?"
-},
-{
-    id: 121,
-    message: "Fair enough, It's pretty ridiculous that they make you make such a big decision so early on in your life. But you know what, I changed degrees 2 times mate, and plenty of my friends too :). Actually about 50% of students change their degree during their time at uni. Did you want more info? Or help with anything else?"
-}
-
-]
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen((process.env.PORT || 3000));
