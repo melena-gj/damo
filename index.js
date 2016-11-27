@@ -131,8 +131,7 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
-        messageHelper(recipientID, {text: "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?"});
-        quickReply(recipientID, "Class Test", "Half yearlies or Trials", "HSC");
+        quickReply(recipientID, "Class Test", "Half yearlies or Trials", "HSC", "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?");
         break;
       case "study":
         messageHelper(recipientID, {text: "u just might as well get drunk"});
