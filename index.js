@@ -106,7 +106,7 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
       case "Not at all":
-        messageHelper(recipientID, "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx")
+        messageHelper(recipientID, {text: "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"})
         break;
       // layer 3
       // careers
@@ -163,6 +163,9 @@ function banterTheUser(recipientID, text) {
     		break;
     	case "need tips fast!":
     		messageHelper(recipientID, {text: "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas."});
+    		break;
+    	case "i'm good":
+    		messageHelper(recipiendID, {text: "Good on you :D"});
     		break;
     	//layer 3
     	//Study
