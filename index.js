@@ -132,7 +132,8 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Yes I have", "No I haven't", "I should", "Ahhk, have you already discussed this with them?");
         break;
       case "friends":
-        messageHelper(recipientID, {text: "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying. I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future."});
+        messageHelper(recipientID, {text: "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying."});
+        	messageHelper(recipientID, {text: "I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future."});
         break;
       case "teachers":
         messageHelper(recipientID, {text: "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying. I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future."});
@@ -140,10 +141,12 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // pressured
       case "yes i have":
-        messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you. If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)"})
+        messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you."}); 
+        	messageHelper(recipientID, {text: "If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)"})
         break;
       case "no i haven't":
-        messageHelper(recipientID, {text: "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you."});
+        messageHelper(recipientID, {text: "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. "});
+        messageHelper(recipientID, {text: "So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you."});
         break;
       case "i should":
       	messageHelper(recipientID, {text: "Yes you should :D Pick a time that's suitable for you and go for it."});
