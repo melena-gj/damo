@@ -159,7 +159,7 @@ function banterTheUser(recipientID, text) {
     	// layer 2
     	// Study
     	case "i have ages":
-    		quickReply(recipientID, "Assignment or project", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
+    		quickReply(recipientID, "Assignment/projects", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
     		break;
     	case "need tips fast!":
     		messageHelper(recipientID, {text: "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas."});
@@ -169,7 +169,7 @@ function banterTheUser(recipientID, text) {
     		break;
     	//layer 3
     	//Study
-    	case "assignment or projects":
+    	case "assignment/projects":
     		messageHelper(recipientID, {text: "Assignments and projects are a useful task to develop your work ethic and goal management. What sort of help do you need?"});
     		break;
     	case "study habits":
