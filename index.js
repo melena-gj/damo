@@ -111,7 +111,7 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // careers
       case "yeah":
-        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks (it might be worth researching these to put your mind at rest). Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."})
+        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks (it might be worth researching these to put your mind at rest). Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
@@ -132,29 +132,29 @@ function banterTheUser(recipientID, text) {
         quickReply("Yes I have", "No I haven't");
         break;
       case "friends":
-        messageHelper(recipientID, "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying. I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future.");
+        messageHelper(recipientID, {text: "Ah yep. TBH I think you should do what you think you should do, not what your friends do. You will stay good friends with your best friends regardless of where you go. And theres nothing better than making new friends who love what you love where you end up studying. I would have a chat with your family, a school career counsellor, and other people for their thoughts. Always remember you can switch programs/ defer if you change your mind in the future."});
         break;
       case "teachers":
-        messageHelper(recipientID, "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying. I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future.");
+        messageHelper(recipientID, {text: "Oh, interesting. They may have your interests at heart, but tell them your thoughts if you haven't yet. And theres nothing better than making new friends who love what you love where you end up studying. I would ask your family, a school career councillor, and ultimately yourself, what you want to do. Always remember you can switch programs/ defer if you change your mind in the future."});
         break;
       // layer 3
       // pressured
       case "yes i have":
-        messageHelper(recipientID, "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you. If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)")
+        messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you. If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)"})
         break;
       case "no i haven't":
-        messageHelper(recipientID, "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you.");
+        messageHelper(recipientID, {text: "I see. Communication is really important in life, and bring up uncomfortable issues is still less painful than putting them off. So I very much think you should tell them your thoughts. If you still disagree, then remember even if you go on to begin studying their prefered option, you're able to transfer and defer if it still doesn't gel for you."});
         break;
       // layer 2
       // Exams
       case "class test":
-      	messageHelper(recipientID, "Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand.");
+      	messageHelper(recipientID, {text: "Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand."});
       	break;
       case "half yearlies or trials":
-      	messageHelper(recipientID, "The aim of these exams is to simulate the HSC environment. Use this opportunity to check whether your summaries are effective.");
+      	messageHelper(recipientID, {text:"The aim of these exams is to simulate the HSC environment. Use this opportunity to check whether your summaries are effective."});
     		break;
     	case "hsc":
-    		messageHelper("recipientID, This is the time to do as many past papers as you can. Make sure you cover all areas of your syllabus.");
+    		messageHelper(recipientID,{text: "This is the time to do as many past papers as you can. Make sure you cover all areas of your syllabus."});
     		break;
     	// layer 2
     	// Study
@@ -162,18 +162,18 @@ function banterTheUser(recipientID, text) {
     		quickReply(recipientID, "Assignment or project", "Study habits", "Notetaking", "Since you have plenty of time to prepare, there are many things you can implement to aid your learning and long term memory.");
     		break;
     	case "need tips fast!":
-    		messageHelper(recipientID, "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas.");
+    		messageHelper(recipientID, {text: "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas."});
     		break;
     	//layer 3
     	//Study
     	case "assignment or projects":
-    		messageHelper(recipientID, "Assignments and projects are a useful task to develop your work ethic and goal management. What sort of help do you need?");
+    		messageHelper(recipientID, {text: "Assignments and projects are a useful task to develop your work ethic and goal management. What sort of help do you need?"});
     		break;
     	case "study habits":
-    		messageHelper(recipientID, "There are a number of ways you can improve your work ethic and develop a disciplined approach to your studies. These are some of the areas I would reccomend.");
+    		messageHelper(recipientID, {text: "There are a number of ways you can improve your work ethic and develop a disciplined approach to your studies. These are some of the areas I would reccomend."});
     		break;
     	case "notetaking":
-    		messageHelper(recipientID, "Keeping notes throughout the year will give you a good basis for revision later. Here are some tips for taking effective notes. Be consistent: use the same type of book or notepad throughout the year. Keep track of the section of syllabus your notes are relevant to. At the end of each week, skim over your notes and highlight important sections to help you access the content more efficiently towards the end of the year or before an exam. Every few weeks, skim your notes and type up a brief summary of the topics. These super-condensed summaries of your work will be perfect to trigger your memory towards the end of the year. Annotate them with the sections of syllabus they refer to. Good Luck!");
+    		messageHelper(recipientID, {text: "Keeping notes throughout the year will give you a good basis for revision later. Here are some tips for taking effective notes. Be consistent: use the same type of book or notepad throughout the year. Keep track of the section of syllabus your notes are relevant to. At the end of each week, skim over your notes and highlight important sections to help you access the content more efficiently towards the end of the year or before an exam. Every few weeks, skim your notes and type up a brief summary of the topics. These super-condensed summaries of your work will be perfect to trigger your memory towards the end of the year. Annotate them with the sections of syllabus they refer to. Good Luck!"});
     		break;
 
 
