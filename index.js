@@ -176,7 +176,7 @@ function banterTheUser(recipientID, text) {
     		messageHelper(recipientID, {text: "Here are some things you should try: Ask a friend for their study notes, ask a teacher for more information, read the syllabus points being assessed, watch youtube videos on the topic, skim your textbook, understand formulas."});
     		break;
     	case "i'm good":
-    		messageHelper(recipiendID, {text: "Good on you :D"});
+    		messageHelper(recipientID, {text: "Good on you :D"});
     		break;
     	//layer 3
     	//Study
