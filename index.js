@@ -106,7 +106,8 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "I'm having doubts","Want more info","Worried about marks","Oh, are you having doubts about want you want? Or did you want more info about your choice? Unless, you're worried you won't get the marks to get in? O.o")
         break;
       case "Not at all":
-        messageHelper(recipientID, {text: "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors. A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"})
+        messageHelper(recipientID, {text: "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors."});
+        	messageHelper(recipientID, {text: "A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"})
         break;
       // layer 3
       // careers
@@ -121,7 +122,8 @@ function banterTheUser(recipientID, text) {
         "Fair enough, It's pretty ridiculous that they make you make such a big decision so early on in your life. But you know what, I changed degrees 2 times mate, and plenty of my friends too :). Actually about 50% of students change their degree during their time at uni. Did you want more info?");
         break;
       case "want more info":
-        messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about talking to friends, family or school counsellors? I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary Let me know if you want to talk about anything else in the menu."});
+        messageHelper(recipientID, {text: "I don't have a huge amount of experience myself but have you thought about talking to friends, family or school counsellors?"});
+        	messageHelper(recipientID, {text: "I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary Let me know if you want to talk about anything else in the menu."});
         break;
       case "worried about marks":
         messageHelper(recipientID, {text: "Oh, well at the very worst, if you don't get the marks you need, there are other pathways into the courses you want. If it puts your mind at ease, take some time research some of these pathways for the course you want. Otherwise, remember to put everything in perspective, and approach your exams calmly and methodically."});
