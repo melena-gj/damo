@@ -112,7 +112,8 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // careers
       case "yeah":
-        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 . Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
+        messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 ."});
+        	messageHelper(recipientIDm {text: "Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
@@ -126,7 +127,8 @@ function banterTheUser(recipientID, text) {
         	messageHelper(recipientID, {text: "I think money is a pretty important factor ay ;)? Take a look at this: http://www.payscale.com/research/AU/Country=Australia/Salary Let me know if you want to talk about anything else in the menu."});
         break;
       case "worried about marks":
-        messageHelper(recipientID, {text: "Oh, well at the very worst, if you don't get the marks you need, there are other pathways into the courses you want. If it puts your mind at ease, take some time research some of these pathways for the course you want. Otherwise, remember to put everything in perspective, and approach your exams calmly and methodically."});
+        messageHelper(recipientID, {text: "Oh, well at the very worst, if you don't get the marks you need, there are other pathways into the courses you want. If it puts your mind at ease, take some time research some of these pathways for the course you want."});
+        	messageHelper(recipientID, {text: "Otherwise, remember to put everything in perspective, and approach your exams calmly and methodically."});
         break;
       // layer 2
       // pressured
@@ -144,7 +146,8 @@ function banterTheUser(recipientID, text) {
       // layer 3
       // pressured
       case "yes i have":
-        messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point... maybe you could give their degree a shot for a semester, but change program if you still think its not for you."}); 
+        messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point..."});
+        messageHelper(recipientID, {text: "maybe you could give their degree a shot for a semester, but change program if you still think its not for you."}); 
         	messageHelper(recipientID, {text: "If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)"})
         break;
       case "no i haven't":
