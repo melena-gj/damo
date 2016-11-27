@@ -208,7 +208,8 @@ function quickReply(recipientId, option1, option2, option3, messageText) {
         qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
         method: 'POST',
         json: {
-            recipient: {id: recipientId},
+            recipient:      {id: recipientId},
+            sender_action:  "typing_on",
             message:{
                 text:   messageText,
                 quick_replies:[
