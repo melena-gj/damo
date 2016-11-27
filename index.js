@@ -107,13 +107,13 @@ function banterTheUser(recipientID, text) {
         break;
       case "Not at all":
         messageHelper(recipientID, {text: "Fair enough. It's pretty early in your life to have this figured out. To be honest, to get inspiration, a good start is to talk to people, whether its family, friends, or school counsellors."});
-        	messageHelper(recipientID, {text: "A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"})
+      	messageHelper(recipientID, {text: "A good place to get started would be this career quiz :) http://joboutlook.gov.au/careerquiz.aspx"});
         break;
       // layer 3
       // careers
       case "yeah":
         messageHelper(recipientID, {text: "That's normal, but theres not point worrying about something if that worry doesn't change anything 😛 ."});
-        	messageHelper(recipientIDm {text: "Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
+      	messageHelper(recipientID, {text: "Remember that there are other pathways into a course if you don't get the HSC marks. Otherwise, just approach your studies calmly, methodically, and don't be worried to ask friends and family for help."});
         break;
       case "nah":
         messageHelper(recipientID, {text: 'Alright, anything else you wanted to chat about mate? Click any of the menu options if there is.'});
@@ -147,7 +147,7 @@ function banterTheUser(recipientID, text) {
       // pressured
       case "yes i have":
         messageHelper(recipientID, {text: "Ahh, I understand that in some situations you can't simply go against the will of your parents. They will usually have your interests at heart, and they might even have a valid point..."});
-        messageHelper(recipientID, {text: "maybe you could give their degree a shot for a semester, but change program if you still think its not for you."}); 
+        messageHelper(recipientID, {text: "maybe you could give their degree a shot for a semester, but change program if you still think its not for you."});
         	messageHelper(recipientID, {text: "If you were really set on following your own direction and not their desired one, remember that there are government services to help you in case this causes some serious rifts (for eg in http://www.lawstuff.org.au/sa_law/topics/when-can-I-leave-home)"})
         break;
       case "no i haven't":
