@@ -34,14 +34,14 @@ app.post('/webhook', function (req, res) {
         if (event.message && event.message.text) {
             // Responses
             if (!banterTheUser(event.sender.id, event.message.text)) {
-                messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."});
+                messageHelper(event.sender.id, {text: "Sorry I don't understand what you're saying. Please use the menu buttons to talk to me."});
             }
         } else if (event.postback) {
     		//ignore the initial "Get started" button
     			if (event.postback.payload==="USER_DEFINED_PAYLOAD") {
         		messageHelper(event.sender.id,  {text: "Hi! I'm Damo, I graduated highschool a few years ago, and I've learnt a lot since then. I'm here to help you with HSC stress. Check out the options in the menu below and if you want to talk about one give it a click."});
     			} else if (!banterTheUser(event.sender.id, event.postback.payload)) {
-                messageHelper(event.sender.id, {text: "Mate, I have no clue what you're talking about."})
+                messageHelper(event.sender.id, {text: "Sorry I don't understand what you're saying. Please use the menu buttons to talk to me."})
           }
         }
     }
