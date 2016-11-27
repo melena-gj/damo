@@ -202,6 +202,9 @@ function banterTheUser(recipientID, text) {
     	case "hsc":
     		messageHelper("recipientID, This is the time to do as many past papers as you can. Make sure you cover all areas of your syllabus.");
     		break;
+    	default: 
+    		messageHelper("u cooked lad");
+    		break;
 
     }
     return true
