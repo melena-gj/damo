@@ -85,7 +85,7 @@ function banterTheUser(recipientID, text) {
         quickReply(recipientID, "Yep!", "Sort of...", "Not at all", "Do you already know what you want to study?");
         break;
       case "exams":
-        quickReply(recipientID, "Class Test", "Half yearlies or Trials", "HSC", "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?");
+        quickReply(recipientID, "Class Test", "Trials", "HSC", "Exams are inevitable during HSC, but it's important to remember they are just another part of life. Which stage of exams are you anticipating?");
         break;
       case "study":
         quickReply(recipientID, "I have ages", "Need tips FAST!", "I'm good", "You will need to study consistently throughout this year if you want to avoid cramming. But it may be too late for this. Which stage are you at right now?");
@@ -156,7 +156,7 @@ function banterTheUser(recipientID, text) {
       case "class test":
       	messageHelper(recipientID, {text: "Class tests aren't important. The main goal is to make sure you are keeping up with course content. This is a good time to revise your work and ask your peers and teachers about any areas you don't understand."});
       	break;
-      case "half yearlies or trials":
+      case "trials":
       	messageHelper(recipientID, {text:"The aim of these exams is to simulate the HSC environment. Use this opportunity to check whether your summaries are effective."});
     		break;
     	case "hsc":
